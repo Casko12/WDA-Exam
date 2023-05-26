@@ -49,9 +49,9 @@ namespace WDA_Exam.Controllers
         // GET: Exams/Create
         public IActionResult Create()
         {
-            ViewData["ClassRoomId"] = new SelectList(_context.Classrooms, "Id", "Id");
-            ViewData["FacultiesId"] = new SelectList(_context.Faculties, "Id", "Id");
-            ViewData["SubjectsId"] = new SelectList(_context.Subjects, "Id", "Id");
+            ViewData["ClassRoomId"] = new SelectList(_context.Classrooms, "Id", "Name");
+            ViewData["FacultiesId"] = new SelectList(_context.Faculties, "Id", "Name");
+            ViewData["SubjectsId"] = new SelectList(_context.Subjects, "Id", "Name");
             return View();
         }
 
@@ -68,9 +68,9 @@ namespace WDA_Exam.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ClassRoomId"] = new SelectList(_context.Classrooms, "Id", "Id", exam.ClassRoomId);
-            ViewData["FacultiesId"] = new SelectList(_context.Faculties, "Id", "Id", exam.FacultiesId);
-            ViewData["SubjectsId"] = new SelectList(_context.Subjects, "Id", "Id", exam.SubjectsId);
+            ViewData["ClassRoomId"] = new SelectList(_context.Classrooms, "Id", "Name", exam.ClassRoomId);
+            ViewData["FacultiesId"] = new SelectList(_context.Faculties, "Id", "Name", exam.FacultiesId);
+            ViewData["SubjectsId"] = new SelectList(_context.Subjects, "Id", "Name", exam.SubjectsId);
             return View(exam);
         }
 
@@ -87,9 +87,9 @@ namespace WDA_Exam.Controllers
             {
                 return NotFound();
             }
-            ViewData["ClassRoomId"] = new SelectList(_context.Classrooms, "Id", "Id", exam.ClassRoomId);
-            ViewData["FacultiesId"] = new SelectList(_context.Faculties, "Id", "Id", exam.FacultiesId);
-            ViewData["SubjectsId"] = new SelectList(_context.Subjects, "Id", "Id", exam.SubjectsId);
+            ViewData["ClassRoomId"] = new SelectList(_context.Classrooms, "Id", "Name", exam.ClassRoomId);
+            ViewData["FacultiesId"] = new SelectList(_context.Faculties, "Id", "Name", exam.FacultiesId);
+            ViewData["SubjectsId"] = new SelectList(_context.Subjects, "Id", "Name", exam.SubjectsId);
             return View(exam);
         }
 
@@ -125,9 +125,9 @@ namespace WDA_Exam.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ClassRoomId"] = new SelectList(_context.Classrooms, "Id", "Id", exam.ClassRoomId);
-            ViewData["FacultiesId"] = new SelectList(_context.Faculties, "Id", "Id", exam.FacultiesId);
-            ViewData["SubjectsId"] = new SelectList(_context.Subjects, "Id", "Id", exam.SubjectsId);
+            ViewData["ClassRoomId"] = new SelectList(_context.Classrooms, "Id", "Name", exam.ClassRoomId);
+            ViewData["FacultiesId"] = new SelectList(_context.Faculties, "Id", "Name", exam.FacultiesId);
+            ViewData["SubjectsId"] = new SelectList(_context.Subjects, "Id", "Name", exam.SubjectsId);
             return View(exam);
         }
 
