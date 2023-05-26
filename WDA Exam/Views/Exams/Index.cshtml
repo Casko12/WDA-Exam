@@ -40,7 +40,7 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Subjects.Id)
+                @Html.DisplayFor(modelItem => item.Subjects.Name)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.StartTime)
@@ -52,7 +52,7 @@
                 @Html.DisplayFor(modelItem => item.ExamDuration)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ClassRoom.Id)
+                @Html.DisplayFor(modelItem => item.ClassRoom.Name)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Faculties.Id)
